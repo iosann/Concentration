@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0678EA026482D2F0008EAFB /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0678E9F26482D2F0008EAFB /* Int.swift */; };
 		D07AD19B2639D3A2004F832F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AD19A2639D3A2004F832F /* AppDelegate.swift */; };
 		D07AD19D2639D3A2004F832F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AD19C2639D3A2004F832F /* SceneDelegate.swift */; };
 		D07AD19F2639D3A2004F832F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AD19E2639D3A2004F832F /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0678E9F26482D2F0008EAFB /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		D07AD1972639D3A2004F832F /* Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concentration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07AD19A2639D3A2004F832F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D07AD19C2639D3A2004F832F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0678E9E26482D020008EAFB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D0678E9F26482D2F0008EAFB /* Int.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D07AD18E2639D3A1004F832F = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 		D07AD1992639D3A2004F832F /* Concentration */ = {
 			isa = PBXGroup;
 			children = (
+				D0678E9E26482D020008EAFB /* Extensions */,
 				D07AD19A2639D3A2004F832F /* AppDelegate.swift */,
 				D07AD19C2639D3A2004F832F /* SceneDelegate.swift */,
 				D07AD1B0263C7F1C004F832F /* Card.swift */,
@@ -147,6 +158,7 @@
 				D07AD1B4263C7F3C004F832F /* Concentration.swift in Sources */,
 				D07AD19B2639D3A2004F832F /* AppDelegate.swift in Sources */,
 				D07AD19D2639D3A2004F832F /* SceneDelegate.swift in Sources */,
+				D0678EA026482D2F0008EAFB /* Int.swift in Sources */,
 				D07AD1B1263C7F1D004F832F /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
