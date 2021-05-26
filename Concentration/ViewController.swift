@@ -20,9 +20,11 @@ class ViewController: UIViewController {
 	}
 	private var darkColor = UIColor()
 	private var lightColor = UIColor()
-	private var themeArray = [["emojis": ["🐒", "🦩", "🐁", "🐋", "🐍", "🐶", "🐼", "🦊"], "lightColor": #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1), "darkColor": #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)], ["emojis": ["😄", "😭", "😡", "😳", "😱", "😍", "😘", "😜"], "lightColor": #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1), "darkColor": #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)], ["emojis": ["🥶", "⛸", "🏂", "☃️", "❄️", "🧊", "⛷", "🌄"], "lightColor": #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), "darkColor": #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)]]
+	private var themeArray = [["emojis": ["🐒", "🦩", "🐁", "🐋", "🐍", "🐶", "🐼", "🦊"], "lightColor": #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1), "darkColor": #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)],
+							  ["emojis": ["😄", "😭", "😡", "😳", "😱", "😍", "😘", "😜"], "lightColor": #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1), "darkColor": #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)],
+							  ["emojis": ["🥶", "⛸", "🏂", "☃️", "❄️", "🧊", "⛷", "🌄"], "lightColor": #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), "darkColor": #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)]]
 	private var emojiArray = [String]()
-	private var usedEmojisDict = [Int: String]()
+	private var usedEmojisDict = [Card: String]()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -75,11 +77,11 @@ class ViewController: UIViewController {
 	}
 
 	private func appointEmoji(for card: Card) -> String {
-		if usedEmojisDict[card.identifier] == nil, emojiArray.count > 0 {
+		if usedEmojisDict[card] == nil, emojiArray.count > 0 {
 			let randomIndex = emojiArray.count.arc4random
-			usedEmojisDict[card.identifier] = emojiArray.remove(at: randomIndex)
+			usedEmojisDict[card] = emojiArray.remove(at: randomIndex)
 		}
-		return usedEmojisDict[card.identifier] ?? "?"
+		return usedEmojisDict[card] ?? "?"
 	}
 
 	@IBAction private func startNewGame(_ sender: UIButton) {

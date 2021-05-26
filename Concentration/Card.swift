@@ -7,10 +7,19 @@
 
 import Foundation
 
-struct Card {
+struct Card: Hashable {
+
+	func hash(into hasher: inout Hasher) {
+		hasher.combine(identifier)
+	}
+
+	static func ==(lhs: Card, rhs: Card) -> Bool {
+		lhs.identifier == rhs.identifier
+	}
+
 	var isFaceUp = false
 	var isMatched = false
-	let identifier: Int
+	private let identifier: Int
 	private static var identifierFactory = 0
 
 	init() {
